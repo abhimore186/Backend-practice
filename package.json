@@ -2,8 +2,8 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend practice with chai aur code",
-    "type": "module",
-    "main": "index.js",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
   },
@@ -14,6 +14,7 @@
   "author": "Abhishek More",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
   }
 }
