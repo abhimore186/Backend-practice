@@ -178,7 +178,7 @@ const loginUser = asyncHandler(async (req, res) => {
     .cookie("accessToken",accessToken,options)
     .cookie("refreshToken",refreshToken,options)
     .json(
-        new ApiResponse(200,
+        new ApiResponse(200, 
             {
                 user: 
                     loggedInUser,
@@ -194,8 +194,8 @@ const logoutUser = asyncHandler( async(req, res) => {
     await User.findByIdAndUpdate(
         req.user._id,
         {
-            $set: {
-                refreshToken: undefined
+            $unset: {
+                refreshToken: 1
             }
         },
         {
